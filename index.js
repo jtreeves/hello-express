@@ -12,6 +12,12 @@ app.get('/about', function(req, res) {
     res.render('about')
 })
 
+app.get('/blog', (req, res) => {
+    res.render('blog-generic')
+    // ALTERNATIVE:
+    // res.render('blog', { date: 'a generic date' })
+})
+
 app.get('/blog/:date', (req, res) => {
     res.render('blog', { date: req.params.date })
 })
